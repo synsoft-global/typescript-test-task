@@ -1,0 +1,12 @@
+"use strict";
+exports.__esModule = true;
+exports.router = void 0;
+var express_1 = require("express");
+var accountController_1 = require("../controllers/accountController");
+exports.router = express_1["default"].Router();
+exports.router.get('/accounts', accountController_1.getAccounts);
+exports.router.get('/accounts/:id', accountController_1.getAccountById);
+exports.router.post('/accounts', accountController_1.createAccount);
+exports.router.put('/accounts/:id', accountController_1.updateAccountById);
+exports.router["delete"]('/accounts/:id', accountController_1.deleteAccountById);
+exports["default"] = exports.router;
